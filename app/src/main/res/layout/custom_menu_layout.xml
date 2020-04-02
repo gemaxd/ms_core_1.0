@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.navigation.NavigationView
+    android:id="@+id/navigation_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="teste 01"
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/menu_home"
+            android:layout_height="50dp"
+            android:layout_width="match_parent" />
+
+        <TextView
+            android:text="teste 02"
+            android:id="@+id/nav_clientes"
+            android:icon="@drawable/ic_home"
+            android:title="@string/menu_home"
+            android:layout_height="50dp"
+            android:layout_width="match_parent" />
+
+        <TextView
+            android:text="teste 03"
+            android:id="@+id/nav_lista_pedidos"
+            android:icon="@drawable/ic_home"
+            android:title="@string/menu_home"
+            android:layout_height="50dp"
+            android:layout_width="match_parent" />
+
+        <TextView
+            android:text="teste 04"
+            android:id="@+id/nav_historicos"
+            android:icon="@drawable/ic_home"
+            android:title="@string/menu_home"
+            android:layout_height="50dp"
+            android:layout_width="match_parent" />
+
+    </LinearLayout>
+
+
+
+</com.google.android.material.navigation.NavigationView>

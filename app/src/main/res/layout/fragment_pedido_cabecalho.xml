@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context=".modulos.pedido.views.fragments.pedido_cabecalho.PedidoCabecalhoFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/pedido_cabecalho_ll_basico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                style="@style/CardLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/register_section_basic"
+                android:textColor="@color/Black" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/Black" />
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pedido_cabecalho_tipo_ped"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/pedido_cabecalho_tipo_pedido"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pedido_cabecalho_ll_basico">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ped_cabecalho_tipo_ped"
+                style="@style/ValorEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_expandir_abaixo"
+                android:focusable="false"
+                android:imeOptions="actionNext"
+                android:nextFocusForward="@id/cliente_create_cpf_cnpj"
+                android:text="teste" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pedido_cabecalho_nome_cliente"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:hint="@string/pedido_cabecalho_nome_cliente"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pedido_cabecalho_tipo_ped">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ped_cabecalho_nome_cliente"
+                style="@style/ValorEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_expandir_abaixo"
+                android:focusable="false"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:nextFocusForward="@id/cliente_create_fantasia" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pedido_cabecalho_condicao_pagamento"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:hint="@string/pedido_cabecalho_condicao_pagamento"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pedido_cabecalho_nome_cliente">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ped_cabecalho_condicao_pag"
+                style="@style/ValorEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_expandir_abaixo"
+                android:focusable="false"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:nextFocusForward="@id/cliente_create_fantasia"
+                android:textAllCaps="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pedido_cabecalho_ordem_compra"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:hint="@string/pedido_cabecalho_ordem_compra"
+            app:counterEnabled="true"
+            app:counterMaxLength="15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pedido_cabecalho_condicao_pagamento">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ped_cabecalho_ordem_compra"
+                style="@style/ValorEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLength="15"
+                android:nextFocusForward="@id/cliente_create_fantasia" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/pedido_cabecalho_ll_transporte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pedido_cabecalho_ordem_compra">
+
+            <TextView
+                style="@style/CardLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/register_section_transporte"
+                android:textColor="@color/Black" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/Black" />
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pedido_cabecalho_transporte"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:hint="@string/pedido_cabecalho_transportadora"
+            app:layout_constraintEnd_toStartOf="@+id/pedido_cabecalho_transporte_modalidade"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pedido_cabecalho_ll_transporte">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ped_cabecalho_transportadora"
+                style="@style/ValorEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_expandir_abaixo"
+                android:focusable="false"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:nextFocusForward="@id/cliente_create_fantasia"
+                android:textAllCaps="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pedido_cabecalho_transporte_modalidade"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/pedido_cabecalho_modalidade"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="3"
+            app:layout_constraintStart_toEndOf="@+id/pedido_cabecalho_transporte"
+            app:layout_constraintTop_toBottomOf="@+id/pedido_cabecalho_ll_transporte">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ped_cabecalho_modalidade"
+                style="@style/ValorEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_expandir_abaixo"
+                android:focusable="false"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:nextFocusForward="@id/cliente_create_fantasia"
+                android:textAllCaps="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/pedido_cabecalho_ll_observacoes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pedido_cabecalho_transporte">
+
+            <TextView
+                style="@style/CardLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/register_section_observacoes"
+                android:textColor="@color/Black" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/Black" />
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pedido_cabecalho_observacoes"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:hint="@string/pedido_cabecalho_ordem_compra"
+            app:counterEnabled="true"
+            app:counterMaxLength="500"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pedido_cabecalho_ll_observacoes">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ped_cabecalho_observacoes"
+                style="@style/ValorEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLength="500" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/extendedReabrirPedido"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/DimGray"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="12sp"
+            android:text="Reabrir"
+            android:textAlignment="center"
+            android:textColor="@color/White"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/extendedFecharPedido"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/extendedFecharPedido"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/Crimson"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Fechar"
+            android:textSize="12sp"
+            android:textAlignment="center"
+            android:textColor="@color/White"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/extendedAdicionarItem"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/extendedReabrirPedido" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/extendedAdicionarItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/LightSeaGreen"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Adicionar"
+            android:textSize="12sp"
+            android:textAlignment="center"
+            android:textColor="@color/White"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/extendedFecharPedido" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

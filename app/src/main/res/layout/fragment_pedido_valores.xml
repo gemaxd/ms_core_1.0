@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context=".modulos.pedido.views.fragments.pedido_valores.PedidoValoresFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/pedido_cabecalho_ll_observacoes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pedido_cabecalho_transporte">
+
+            <TextView
+                style="@style/CardLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/register_section_valores_basicos"
+                android:textColor="@color/Black" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/Black" />
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pedido_cabecalho_valor_liquido"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:hint="@string/pedido_cabecalho_total_liquido"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pedido_cabecalho_ll_observacoes">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ped_item_valor_total_liquido"
+                style="@style/ValorEditTextStatic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="numberDecimal"
+                android:nextFocusForward="@id/cliente_create_fantasia"
+                android:text="R$ 999,99" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pedido_cabecalho_valor_bruto"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:hint="@string/pedido_cabecalho_total_bruto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pedido_cabecalho_valor_liquido">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ped_item_valor_total_bruto"
+                style="@style/ValorEditTextStatic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="numberDecimal"
+                android:nextFocusForward="@id/cliente_create_fantasia"
+                android:text="R$ 999,99" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/pedido_cabecalho_ll_valores_impostos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pedido_cabecalho_valor_bruto">
+
+            <TextView
+                style="@style/CardLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/register_section_valores_impostos"
+                android:textColor="@color/Black" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/Black" />
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pedido_cabecalho_valor_imposto_ipi"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:hint="@string/pedido_cabecalho_total_imposto_ipi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pedido_cabecalho_ll_valores_impostos">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ped_item_valor_total_ipi"
+                style="@style/ValorEditTextStatic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="numberDecimal"
+                android:nextFocusForward="@id/cliente_create_fantasia"
+                android:text="R$ 999,99" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pedido_cabecalho_valor_imposto_difal"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:hint="@string/pedido_cabecalho_total_imposto_difal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pedido_cabecalho_valor_imposto_ipi">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ped_item_valor_total_difal"
+                style="@style/ValorEditTextStatic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="numberDecimal"
+                android:nextFocusForward="@id/cliente_create_fantasia"
+                android:text="R$ 999,99" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pedido_cabecalho_valor_imposto_st"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:hint="@string/pedido_cabecalho_total_imposto_st"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pedido_cabecalho_valor_imposto_difal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ped_item_valor_total_st"
+                style="@style/ValorEditTextStatic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="numberDecimal"
+                android:nextFocusForward="@id/cliente_create_fantasia"
+                android:text="R$ 999,99" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/pedido_cabecalho_ll_valor_transporte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pedido_cabecalho_valor_imposto_st">
+
+            <TextView
+                style="@style/CardLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/register_section_valores_transporte"
+                android:textColor="@color/Black" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/Black" />
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pedido_cabecalho_valor_transporte"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:hint="@string/pedido_cabecalho_total_transporte"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pedido_cabecalho_ll_valor_transporte">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ped_item_valor_total_transporte"
+                style="@style/ValorEditTextStatic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="numberDecimal"
+                android:nextFocusForward="@id/cliente_create_fantasia"
+                android:text="R$ 999,99" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/pedido_cabecalho_ll_valor_descontos_acrescimos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pedido_cabecalho_valor_transporte">
+
+            <TextView
+                style="@style/CardLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/register_section_descontos_e_acrescimos"
+                android:textColor="@color/Black" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/Black" />
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pedido_cabecalho_valor_descontos"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:hint="@string/pedido_cabecalho_acrescimo"
+            app:layout_constraintEnd_toStartOf="@+id/pedido_cabecalho_valor_acrescimos"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pedido_cabecalho_ll_valor_descontos_acrescimos">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ped_item_valor_total_acrescimo"
+                style="@style/ValorEditTextNegativo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="numberDecimal"
+                android:nextFocusForward="@id/cliente_create_fantasia"
+                android:text="R$ 999,99" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pedido_cabecalho_valor_acrescimos"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:hint="@string/pedido_cabecalho_desconto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/pedido_cabecalho_valor_descontos"
+            app:layout_constraintTop_toBottomOf="@+id/pedido_cabecalho_ll_valor_descontos_acrescimos">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ped_item_valor_total_desconto"
+                style="@style/ValorEditTextPositivo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="numberDecimal"
+                android:nextFocusForward="@id/cliente_create_fantasia"
+                android:text="R$ 999,99" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

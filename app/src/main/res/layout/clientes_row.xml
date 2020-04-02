@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <View
+                    android:id="@+id/clientes_status_marcador"
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/ms_orange"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/cliente_nome_label"
+                    style="@style/ClienteNomeLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/cliente_nome"
+                    app:layout_constraintEnd_toStartOf="@+id/pedidos_btn_expandir"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/clientes_status_marcador"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/cliente_nome"
+                    style="@style/ClienteNome"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="TESTE TESTE TESTE TESTE TESTE"
+                    app:layout_constraintBottom_toTopOf="@+id/cliente_cnpj_label"
+                    app:layout_constraintEnd_toStartOf="@+id/pedidos_btn_expandir"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/clientes_status_marcador"
+                    app:layout_constraintTop_toBottomOf="@+id/cliente_nome_label" />
+
+                <TextView
+                    android:id="@+id/cliente_cnpj_label"
+                    style="@style/ClienteCNPJLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintBottom_toTopOf="@+id/cliente_cnpj"
+                    app:layout_constraintEnd_toStartOf="@+id/pedidos_btn_expandir"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/clientes_status_marcador"
+                    app:layout_constraintTop_toBottomOf="@+id/cliente_nome" />
+
+                <TextView
+                    android:id="@+id/cliente_cnpj"
+                    style="@style/ClienteCNPJ"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="CNPJ: 9999999999999"
+                    app:layout_constraintBottom_toTopOf="@+id/cliente_endereco_label"
+                    app:layout_constraintEnd_toStartOf="@+id/pedidos_btn_expandir"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/clientes_status_marcador"
+                    app:layout_constraintTop_toBottomOf="@+id/cliente_cnpj_label" />
+
+                <TextView
+                    android:id="@+id/cliente_endereco_label"
+                    style="@style/ClienteEnderecoLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintBottom_toTopOf="@+id/cliente_endereco"
+                    app:layout_constraintEnd_toStartOf="@+id/pedidos_btn_expandir"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/clientes_status_marcador"
+                    app:layout_constraintTop_toBottomOf="@+id/cliente_cnpj" />
+
+                <TextView
+                    android:id="@+id/cliente_endereco"
+                    style="@style/ClienteEndereco"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="ENDERECO: 99999999999999"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/pedidos_btn_expandir"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/clientes_status_marcador"
+                    app:layout_constraintTop_toBottomOf="@+id/cliente_endereco_label" />
+
+                <LinearLayout
+                    android:id="@+id/pedidos_btn_options"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@+id/pedidos_btn_expandir"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@+id/pedidos_btn_expandir"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_marginStart="25dp"
+                        android:layout_marginBottom="20dp"
+                        android:padding="5dp"
+                        android:layout_gravity="end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_mais"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/pedidos_btn_expandir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pedidos_btn_options">
+
+                    <TextView
+                        style="@style/ClienteCodigoLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        style="@style/ClienteCodigo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="9999999" />
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

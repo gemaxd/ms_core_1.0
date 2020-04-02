@@ -1,0 +1,754 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "77413b9a9533c0ca7baa67805c7c9bbe",
+    "entities": [
+      {
+        "tableName": "Cliente",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`teste` TEXT NOT NULL, `erpId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nome_cliente` TEXT NOT NULL, `nome_fantasia` TEXT NOT NULL, `cliente_cpf_cnpj` TEXT NOT NULL, `tipo_cliente` TEXT NOT NULL, `tipo_empresa` TEXT NOT NULL, `ramo_atividade` TEXT NOT NULL, `cliente_contribui_icms` TEXT NOT NULL, `cliente_inscricao_estadual` TEXT NOT NULL, `cliente_inscricao_municipal` TEXT NOT NULL, `cliente_beneficio_fiscal` TEXT NOT NULL, `cliente_codigo_suframa` TEXT NOT NULL, `cliente_tributa_icms` TEXT NOT NULL, `cliente_tributa_ipi` TEXT NOT NULL, `cliente_tributa_pis` TEXT NOT NULL, `cliente_tributa_cofins` TEXT NOT NULL, `cliente_retencao_irrf` TEXT NOT NULL, `cliente_endereco` TEXT NOT NULL, `rowdel` INTEGER NOT NULL, `data_atualizacao` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "teste",
+            "columnName": "teste",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "erpId",
+            "columnName": "erpId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nomCli",
+            "columnName": "nome_cliente",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nomFan",
+            "columnName": "nome_fantasia",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cliCpfCnpj",
+            "columnName": "cliente_cpf_cnpj",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tipCli",
+            "columnName": "tipo_cliente",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tipEmp",
+            "columnName": "tipo_empresa",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "codRam",
+            "columnName": "ramo_atividade",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cliContrib",
+            "columnName": "cliente_contribui_icms",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cliInscrEst",
+            "columnName": "cliente_inscricao_estadual",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cliInscrMun",
+            "columnName": "cliente_inscricao_municipal",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cliBeneFis",
+            "columnName": "cliente_beneficio_fiscal",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cliCodSuframa",
+            "columnName": "cliente_codigo_suframa",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cliTribIcms",
+            "columnName": "cliente_tributa_icms",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cliTribIpi",
+            "columnName": "cliente_tributa_ipi",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cliTribPis",
+            "columnName": "cliente_tributa_pis",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cliTribCofins",
+            "columnName": "cliente_tributa_cofins",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cliRetIRRF",
+            "columnName": "cliente_retencao_irrf",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cliEnd",
+            "columnName": "cliente_endereco",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rowDel",
+            "columnName": "rowdel",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dataAtualizacao",
+            "columnName": "data_atualizacao",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "erpId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Pedido",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`cliente_nome` TEXT NOT NULL, `ordem_compra` TEXT NOT NULL, `transportadora` TEXT NOT NULL, `modalidade` TEXT NOT NULL, `pedido_ativo` TEXT NOT NULL, `referenceCode` TEXT NOT NULL, `tip_pedido` TEXT NOT NULL, `sit_pedido` TEXT NOT NULL, `dat_emissao` INTEGER NOT NULL, `dat_previsao` INTEGER NOT NULL, `observacao` TEXT NOT NULL, `cod_cliente` INTEGER NOT NULL, `cod_representante` INTEGER NOT NULL, `cod_condicao_pagamento` TEXT NOT NULL, `quantidade_itens` INTEGER NOT NULL, `val_bruto` REAL NOT NULL, `val_liquido` REAL NOT NULL, `val_ipi` REAL NOT NULL, `val_difal` REAL NOT NULL, `val_icms_substituido` REAL NOT NULL, `val_comissao` REAL NOT NULL, `val_desconto` REAL NOT NULL, `val_acrescimo` REAL NOT NULL, `val_transporte` REAL NOT NULL, `per_ipi` REAL NOT NULL, `per_icms_substituido` REAL NOT NULL, `per_comissao` REAL NOT NULL, `rowdel` INTEGER NOT NULL, `data_atualizacao` INTEGER NOT NULL, PRIMARY KEY(`referenceCode`))",
+        "fields": [
+          {
+            "fieldPath": "clienteNome",
+            "columnName": "cliente_nome",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ordemCompra",
+            "columnName": "ordem_compra",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "transportadora",
+            "columnName": "transportadora",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "modalidade",
+            "columnName": "modalidade",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pedidoAtivo",
+            "columnName": "pedido_ativo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "referenceCode",
+            "columnName": "referenceCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tipPedido",
+            "columnName": "tip_pedido",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sitPedido",
+            "columnName": "sit_pedido",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "datEmissao",
+            "columnName": "dat_emissao",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "datPrevisao",
+            "columnName": "dat_previsao",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "observacao",
+            "columnName": "observacao",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "codCliente",
+            "columnName": "cod_cliente",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "codRepresentante",
+            "columnName": "cod_representante",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "codCondicaoPagamento",
+            "columnName": "cod_condicao_pagamento",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "quantidade_itens",
+            "columnName": "quantidade_itens",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "valBruto",
+            "columnName": "val_bruto",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "valLiquido",
+            "columnName": "val_liquido",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "valIpi",
+            "columnName": "val_ipi",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "valDifal",
+            "columnName": "val_difal",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "valIcmsSubstituido",
+            "columnName": "val_icms_substituido",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "valComissao",
+            "columnName": "val_comissao",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "valDesconto",
+            "columnName": "val_desconto",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "valAcrescimo",
+            "columnName": "val_acrescimo",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "valTransporte",
+            "columnName": "val_transporte",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "perIpi",
+            "columnName": "per_ipi",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "perIcmsSubstituido",
+            "columnName": "per_icms_substituido",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "perComissao",
+            "columnName": "per_comissao",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rowDel",
+            "columnName": "rowdel",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dataAtualizacao",
+            "columnName": "data_atualizacao",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "referenceCode"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Transportadora",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`teste` TEXT NOT NULL, `referenceCode` TEXT NOT NULL, `nom_transportadora` TEXT NOT NULL, `cod_transportadora` TEXT NOT NULL, `rowdel` INTEGER NOT NULL, `data_atualizacao` INTEGER NOT NULL, PRIMARY KEY(`referenceCode`))",
+        "fields": [
+          {
+            "fieldPath": "teste",
+            "columnName": "teste",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "referenceCode",
+            "columnName": "referenceCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nomeTransportadora",
+            "columnName": "nom_transportadora",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "codTransportadora",
+            "columnName": "cod_transportadora",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rowDel",
+            "columnName": "rowdel",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dataAtualizacao",
+            "columnName": "data_atualizacao",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "referenceCode"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "CondicaoPagamento",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`teste` TEXT NOT NULL, `referenceCode` TEXT NOT NULL, `cod_condicao_pagamento` TEXT NOT NULL, `nom_condicao_pagamento` TEXT NOT NULL, `perc_desconto_acrescimo` REAL NOT NULL, `rowdel` INTEGER NOT NULL, `data_atualizacao` INTEGER NOT NULL, PRIMARY KEY(`referenceCode`))",
+        "fields": [
+          {
+            "fieldPath": "teste",
+            "columnName": "teste",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "referenceCode",
+            "columnName": "referenceCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "codCondicaoPagamento",
+            "columnName": "cod_condicao_pagamento",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nomCondicaoPagamento",
+            "columnName": "nom_condicao_pagamento",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percDescontoAcrescimo",
+            "columnName": "perc_desconto_acrescimo",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rowDel",
+            "columnName": "rowdel",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dataAtualizacao",
+            "columnName": "data_atualizacao",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "referenceCode"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "TipoPedido",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`teste` TEXT NOT NULL, `referenceCode` TEXT NOT NULL, `nom_tipo_pedido` TEXT NOT NULL, `cod_tipo_pedido` TEXT NOT NULL, `rowdel` INTEGER NOT NULL, `data_atualizacao` INTEGER NOT NULL, PRIMARY KEY(`referenceCode`))",
+        "fields": [
+          {
+            "fieldPath": "teste",
+            "columnName": "teste",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "referenceCode",
+            "columnName": "referenceCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nomTipoPedido",
+            "columnName": "nom_tipo_pedido",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "codTipoPedido",
+            "columnName": "cod_tipo_pedido",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rowDel",
+            "columnName": "rowdel",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dataAtualizacao",
+            "columnName": "data_atualizacao",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "referenceCode"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "PedidoItem",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`teste` TEXT NOT NULL, `pedido_ref_code` TEXT NOT NULL, `referenceCode` TEXT NOT NULL, `descricao_produto` TEXT NOT NULL, `dat_emissao` INTEGER NOT NULL, `dat_previsao` INTEGER NOT NULL, `observacao` INTEGER NOT NULL, `cod_cliente` INTEGER NOT NULL, `cod_produto` TEXT NOT NULL, `cod_representante` INTEGER NOT NULL, `cod_condicao_pagamento` INTEGER NOT NULL, `val_unitario` REAL NOT NULL, `val_bruto` REAL NOT NULL, `val_liquido` REAL NOT NULL, `val_ipi` REAL NOT NULL, `val_icms_substituido` REAL NOT NULL, `val_comissao` REAL NOT NULL, `per_ipi` REAL NOT NULL, `per_icms_substituido` REAL NOT NULL, `per_comissao` REAL NOT NULL, `rowdel` INTEGER NOT NULL, `data_atualizacao` INTEGER NOT NULL, PRIMARY KEY(`referenceCode`))",
+        "fields": [
+          {
+            "fieldPath": "teste",
+            "columnName": "teste",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pedidoReferenceCode",
+            "columnName": "pedido_ref_code",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "referenceCode",
+            "columnName": "referenceCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "descProduto",
+            "columnName": "descricao_produto",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "datEmissao",
+            "columnName": "dat_emissao",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "datPrevisao",
+            "columnName": "dat_previsao",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "observacao",
+            "columnName": "observacao",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "codCliente",
+            "columnName": "cod_cliente",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "codProduto",
+            "columnName": "cod_produto",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "codRepresentante",
+            "columnName": "cod_representante",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "codCondicaoPagamento",
+            "columnName": "cod_condicao_pagamento",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "valUnitario",
+            "columnName": "val_unitario",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "valBruto",
+            "columnName": "val_bruto",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "valLiquido",
+            "columnName": "val_liquido",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "valIpi",
+            "columnName": "val_ipi",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "valIcmsSubstituido",
+            "columnName": "val_icms_substituido",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "valComissao",
+            "columnName": "val_comissao",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "perIpi",
+            "columnName": "per_ipi",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "perIcmsSubstituido",
+            "columnName": "per_icms_substituido",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "perComissao",
+            "columnName": "per_comissao",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rowDel",
+            "columnName": "rowdel",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dataAtualizacao",
+            "columnName": "data_atualizacao",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "referenceCode"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Produto",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`teste` TEXT NOT NULL, `pedido_ref_code` TEXT NOT NULL, `referenceCode` TEXT NOT NULL, `cod_produto` TEXT NOT NULL, `desc_produto` TEXT NOT NULL, `cod_condicao_pagamento` INTEGER NOT NULL, `val_bruto` REAL NOT NULL, `val_liquido` REAL NOT NULL, `val_ipi` REAL NOT NULL, `val_icms_substituido` REAL NOT NULL, `val_comissao` REAL NOT NULL, `per_ipi` REAL NOT NULL, `per_icms_substituido` REAL NOT NULL, `per_comissao` REAL NOT NULL, `rowdel` INTEGER NOT NULL, `data_atualizacao` INTEGER NOT NULL, PRIMARY KEY(`referenceCode`))",
+        "fields": [
+          {
+            "fieldPath": "teste",
+            "columnName": "teste",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pedidoReferenceCode",
+            "columnName": "pedido_ref_code",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "referenceCode",
+            "columnName": "referenceCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "codProduto",
+            "columnName": "cod_produto",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "descProduto",
+            "columnName": "desc_produto",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "codCondicaoPagamento",
+            "columnName": "cod_condicao_pagamento",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "valBruto",
+            "columnName": "val_bruto",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "valLiquido",
+            "columnName": "val_liquido",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "valIpi",
+            "columnName": "val_ipi",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "valIcmsSubstituido",
+            "columnName": "val_icms_substituido",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "valComissao",
+            "columnName": "val_comissao",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "perIpi",
+            "columnName": "per_ipi",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "perIcmsSubstituido",
+            "columnName": "per_icms_substituido",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "perComissao",
+            "columnName": "per_comissao",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rowDel",
+            "columnName": "rowdel",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dataAtualizacao",
+            "columnName": "data_atualizacao",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "referenceCode"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '77413b9a9533c0ca7baa67805c7c9bbe')"
+    ]
+  }
+}

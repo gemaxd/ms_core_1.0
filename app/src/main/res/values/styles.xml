@@ -1,0 +1,697 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="@style/Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/ms_orange</item>
+        <item name="colorPrimaryDark">@color/ms_orange</item>
+        <item name="colorAccent">@color/ms_orange_light</item>
+    </style>
+
+    <!-- Navigation View -->
+    <style name="NavigationView">
+        <item name="android:textColorSecondary">@color/DarkOrange</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+
+
+
+
+
+
+    <!--LOGIN - Versão -->
+    <style name="LoginAppVersion">
+        <item name="android:padding">5dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- LOGIN - Logo Image -->
+    <style name="LoginLogoImage"></style>
+
+    <!-- LOGIN - card de informações -->
+    <style name="CardLogin">
+        <item name="android:padding">35dp</item>
+    </style>
+
+    <style name="BaseLoginCredentials">
+        <item name="android:elevation">3dp</item>
+        <item name="android:fontFamily">sans-serif-condensed-medium</item>
+        <item name="android:textColor">@color/TranslucideBlack</item>
+        <item name="android:textColorHint">@color/TranslucideDarkGray</item>
+        <item name="android:layout_marginStart">30dp</item>
+        <item name="android:layout_marginEnd">30dp</item>
+    </style>
+
+    <!-- LOGIN - nome do app -->
+    <style name="LoginAppName">
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginStart">5dp</item>
+        <item name="android:layout_marginEnd">5dp</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:fontFamily">sans-serif-condensed-medium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:elevation">3dp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:backgroundTint">@color/colorPrimary</item>
+    </style>
+
+
+    <!-- LOGIN - textview label de usuário -->
+    <style name="LoginTextViewUser" parent="BaseLoginCredentials">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:hint">@string/login_email_hint</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:text">Usuário</item>
+    </style>
+
+    <!-- LOGIN - editText de usuário -->
+    <style name="LoginEditTextUser" parent="BaseLoginCredentials">
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:background">@drawable/login_edt_user_shape</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:inputType">text</item>
+    </style>
+
+
+    <!-- LOGIN - textview label de usuário -->
+    <style name="LoginTextViewPassword" parent="BaseLoginCredentials">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:hint">@string/login_email_hint</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:text">Senha</item>
+    </style>
+
+    <!-- LOGIN - editText de senha -->
+    <style name="LoginEditTextPassword" parent="BaseLoginCredentials">
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:background">@drawable/login_edt_user_shape</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:inputType">textPassword</item>
+    </style>
+
+
+    <!-- LOGIN - button -->
+    <style name="LoginButtonLogin" parent="Widget.MaterialComponents.Button">
+        <item name="android:padding">15dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-condensed-medium</item>
+        <item name="android:text">LOGIN</item>
+    </style>
+
+    <!-- LOGIN - link -->
+    <style name="LoginLink">
+        <item name="android:layout_marginStart">30dp</item>
+        <item name="android:layout_marginEnd">30dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:fontFamily">sans-serif-condensed-medium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@null</item>
+    </style>
+
+
+
+
+
+
+
+    <!-- CARDS -->
+    <style name="CardLabel">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:layout_marginStart">3dp</item>
+        <item name="android:textColor">@color/LightSlateGray</item>
+    </style>
+
+    <style name="CardValue">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:layout_marginStart">3dp</item>
+    </style>
+
+
+
+
+
+
+
+
+    <!-- CLIENTES - Busca -->
+    <style name="ClienteNomeLabel" parent="CardLabel">
+        <item name="android:text">Nome</item>
+    </style>
+
+    <style name="ClienteCNPJLabel" parent="CardLabel">
+        <item name="android:text">CNPJ</item>
+    </style>
+
+    <style name="ClienteEnderecoLabel" parent="CardLabel">
+        <item name="android:text">Endereço</item>
+    </style>
+
+    <style name="ClienteCodigoLabel" parent="CardLabel">
+        <item name="android:textAlignment">textEnd</item>
+        <item name="android:text">Código</item>
+    </style>
+
+    <style name="ClienteNome" parent="CardValue">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ClienteCNPJ" parent="CardValue">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/Gray</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ClienteEndereco" parent="CardValue">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/Gray</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ClienteCodigo" parent="CardValue">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/Gray</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- CLIENTES - Criação -->
+    <style name="ClienteCreateEnderecoLabel" parent="CardLabel">
+        <item name="android:text">ENDEREÇO</item>
+    </style>
+
+    <style name="ClienteCreateBairroLabel" parent="CardLabel">
+        <item name="android:text">BAIRRO</item>
+    </style>
+
+    <style name="ClienteCreateNumeroLabel" parent="CardLabel">
+        <item name="android:text">NÚMERO</item>
+    </style>
+
+    <style name="ClienteCreateCEPLabel" parent="CardLabel">
+        <item name="android:text">CEP</item>
+    </style>
+
+    <style name="ClienteCreateEstadoLabel" parent="CardLabel">
+        <item name="android:text">ESTADO</item>
+    </style>
+
+    <style name="ClienteCreateCidadeLabel" parent="CardLabel">
+        <item name="android:text">CIDADE</item>
+    </style>
+
+    <style name="ClienteCreateNomeLabel" parent="CardLabel">
+        <item name="android:text">NOME</item>
+    </style>
+
+    <style name="ClienteCreateTipoLabel" parent="CardLabel">
+        <item name="android:text">TIPO</item>
+    </style>
+
+    <style name="ClienteCreateCpfCnpjLabel" parent="CardLabel">
+        <item name="android:text">CPF / CNPJ</item>
+    </style>
+
+    <style name="ClienteCreateFantasiaLabel" parent="CardLabel">
+        <item name="android:text">FANTASIA</item>
+    </style>
+
+    <style name="ClienteCreateSuframaLabel" parent="CardLabel">
+        <item name="android:text">SUFRAMA</item>
+    </style>
+
+    <style name="ClienteCreateInscricaoLabel" parent="CardLabel">
+        <item name="android:text">INSCRIÇÃO ESTADUAL</item>
+    </style>
+
+    <style name="ClienteCreateContatoTelefoneLabel" parent="CardLabel">
+        <item name="android:text">TELEFONE</item>
+    </style>
+
+    <style name="ClienteCreateEmailLabel" parent="CardLabel">
+        <item name="android:text">EMAIL</item>
+    </style>
+
+    <style name="ClienteCreateEmailNFLabel" parent="CardLabel">
+        <item name="android:text">EMAIL-NF</item>
+    </style>
+
+    <style name="ClienteCreateEndereco" parent="CardValue">
+        <item name="android:background">@drawable/selector_edittext</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:hint">ENDEREÇO</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/Gray</item>
+    </style>
+
+    <style name="ClienteCreateBairro" parent="CardValue">
+        <item name="android:background">@drawable/selector_edittext</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:hint">BAIRRO</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/Gray</item>
+    </style>
+
+    <style name="ClienteCreateNumero" parent="CardValue">
+        <item name="android:background">@drawable/selector_edittext</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:hint">NÚMERO</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/Gray</item>
+    </style>
+
+    <style name="ClienteCreateCEP" parent="CardValue">
+        <item name="android:background">@drawable/selector_edittext</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:hint">CEP</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/Gray</item>
+    </style>
+
+    <style name="ClienteCreateEstado" parent="CardValue">
+        <item name="android:background">@drawable/selector_edittext</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:hint">ESTADO</item>
+        <item name="android:drawableEnd">@drawable/ic_expandir_abaixo</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/Gray</item>
+    </style>
+
+    <style name="ClienteCreateCidade" parent="CardValue">
+        <item name="android:background">@drawable/selector_edittext</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:hint">CIDADE</item>
+        <item name="android:drawableEnd">@drawable/ic_expandir_abaixo</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/Gray</item>
+    </style>
+
+    <style name="ClienteCreateNome" parent="CardValue">
+        <item name="android:background">@drawable/selector_edittext</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:hint">NOME</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textColor">@color/Gray</item>
+    </style>
+
+    <style name="ClienteCreateFantasia" parent="CardValue">
+        <item name="android:background">@drawable/selector_edittext</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:hint">FANTASIA</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/Gray</item>
+    </style>
+
+    <style name="ClienteCreateTipo" parent="CardValue">
+        <item name="android:background">@drawable/selector_edittext</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:hint">TIPO</item>
+        <item name="android:drawableEnd">@drawable/ic_expandir_abaixo</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textColor">@color/Gray</item>
+    </style>
+
+    <style name="ClienteCreateCpfCnpj" parent="CardValue">
+        <item name="android:background">@drawable/selector_edittext</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:hint">CPF / CNPJ</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/Gray</item>
+    </style>
+
+    <style name="ClienteCreateSuframa" parent="CardValue">
+        <item name="android:background">@drawable/selector_edittext</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:hint">SUFRAMA</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textColor">@color/Gray</item>
+    </style>
+
+    <style name="ClienteCreateInscricao" parent="CardValue">
+        <item name="android:background">@drawable/selector_edittext</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:hint">INSCRIÇÃO</item>
+        <item name="android:drawableEnd">@drawable/ic_expandir_abaixo</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/Gray</item>
+    </style>
+
+    <style name="ClienteCreateTelefone" parent="CardValue">
+        <item name="android:background">@drawable/selector_edittext</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:hint">TELEFONE</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textColor">@color/Gray</item>
+    </style>
+
+    <style name="ClienteCreateEmail" parent="CardValue">
+        <item name="android:background">@drawable/selector_edittext</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:hint">EMAIL</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/Gray</item>
+    </style>
+
+    <style name="ClienteCreateEmailNF" parent="CardValue">
+        <item name="android:background">@drawable/selector_edittext</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:hint">EMAIL NF</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/Gray</item>
+    </style>
+
+
+
+    <!-- Tablayout pager title estilo -->
+    <style name="PagerText">
+        <item name="android:padding">4dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:fontFamily">sans-serif-condensed-medium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="ValorEditText">
+        <!-- <item name="android:textStyle">bold</item> -->
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textColor">@color/Black</item>
+    </style>
+
+    <style name="ValorEditTextStatic">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textColor">@color/Black</item>
+    </style>
+
+    <style name="ValorEditTextPositivo" parent="ValorEditTextStatic">
+        <item name="android:textColor">@color/Green</item>
+    </style>
+
+    <style name="ValorEditTextNegativo" parent="ValorEditTextStatic">
+        <item name="android:textColor">@color/Red</item>
+    </style>
+
+    <style name="AdapterItemText">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textColor">@color/Black</item>
+    </style>
+
+
+
+
+
+
+
+
+
+    <!-- Pedidos -  -->
+    <style name="PedidosClienteDataLimiteLabel" parent="CardLabel">
+        <item name="android:textAlignment">center</item>
+        <item name="android:text">DATA LIMITE</item>
+    </style>
+
+    <style name="PedidosClienteDataCriacaoLabel" parent="CardLabel">
+        <item name="android:textAlignment">center</item>
+        <item name="android:text">DATA CRIAÇÃO</item>
+    </style>
+
+    <style name="PedidosData" parent="CardValue">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/Gray</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="PedidosOrdemCompraLabel" parent="CardLabel">
+        <item name="android:textAlignment">center</item>
+        <item name="android:text">ORDEM DE COMPRA</item>
+    </style>
+
+    <style name="PedidosOrdemCompra" parent="CardValue">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/Gray</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="PedidosReferenceCodeLabel" parent="CardLabel">
+        <item name="android:textAlignment">center</item>
+        <item name="android:text">CÓDIGO DE REFERÊNCIA NO APP</item>
+    </style>
+
+    <style name="PedidosReferenceCode" parent="CardValue">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="PedidosClienteNomeLabel" parent="CardLabel">
+        <item name="android:text">NOME CLIENTE</item>
+    </style>
+
+    <style name="PedidosClienteNome" parent="CardValue">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="PedidosValorTotalLabel" parent="CardLabel">
+        <item name="android:textAlignment">center</item>
+        <item name="android:text">VALOR TOTAL</item>
+    </style>
+
+    <style name="PedidosValorImpostosLabel" parent="CardLabel">
+        <item name="android:textAlignment">center</item>
+        <item name="android:text">VALOR IMPOSTOS</item>
+    </style>
+
+    <style name="PedidosValor" parent="CardValue">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/Gray</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="PedidosCondicaoPagamentoLabel" parent="CardLabel">
+        <item name="android:text">CONDIÇÃO DE PAGAMENTO</item>
+    </style>
+
+    <style name="PedidosCondicaoPagamento" parent="CardValue">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/Gray</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="PedidosQuantidadeProdutosLabel" parent="CardLabel">
+        <item name="android:textAlignment">center</item>
+        <item name="android:text">QUANTIDADE</item>
+    </style>
+
+    <style name="PedidosQuantidadeProdutos" parent="CardValue">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/Gray</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="PedidosSituacaoLabel" parent="CardLabel">
+        <item name="android:textAlignment">center</item>
+        <item name="android:text">SITUAÇÃO</item>
+    </style>
+
+    <style name="PedidosSituacao" parent="CardValue">
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/Gray</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+
+    <!-- Titulos -  -->
+    <style name="TitulosClienteDataAtualizacao" parent="CardLabel">
+        <item name="android:textAlignment">center</item>
+        <item name="android:text">ATUALIZADO EM</item>
+    </style>
+
+    <style name="TitulosClienteDataCriacaoLabel" parent="CardLabel">
+        <item name="android:textAlignment">center</item>
+        <item name="android:text">DATA CRIAÇÃO</item>
+    </style>
+
+    <style name="TitulosClienteCodigoLabel" parent="CardLabel">
+        <item name="android:textAlignment">center</item>
+        <item name="android:text">CÓDIGO CLIENTE</item>
+    </style>
+
+    <style name="TitulosNumeroTitulo" parent="CardLabel">
+        <item name="android:textAlignment">center</item>
+        <item name="android:text">NÚMERO TÍTULO</item>
+    </style>
+
+    <style name="TitulosData" parent="CardValue">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/Gray</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TitulosOrdemCompraLabel" parent="CardLabel">
+        <item name="android:textAlignment">center</item>
+        <item name="android:text">ORDEM DE COMPRA</item>
+    </style>
+
+    <style name="TitulosOrdemCompra" parent="CardValue">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/Gray</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TitulosReferenceCodeLabel" parent="CardLabel">
+        <item name="android:textAlignment">center</item>
+        <item name="android:text">CÓDIGO DE REFERÊNCIA NO APP</item>
+    </style>
+
+    <style name="TitulosReferenceCode" parent="CardValue">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="TitulosClienteNomeLabel" parent="CardLabel">
+        <item name="android:text">NOME CLIENTE</item>
+    </style>
+
+    <style name="TitulosClienteNome" parent="CardValue">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TitulosValorTotalLabel" parent="CardLabel">
+        <item name="android:textAlignment">center</item>
+        <item name="android:text">VALOR TOTAL</item>
+    </style>
+
+    <style name="TitulosParcelasLabel" parent="CardLabel">
+        <item name="android:textAlignment">center</item>
+        <item name="android:text">PARCELAS</item>
+    </style>
+
+    <style name="TitulosValorImpostosLabel" parent="CardLabel">
+        <item name="android:textAlignment">center</item>
+        <item name="android:text">VALOR IMPOSTOS</item>
+    </style>
+
+    <style name="TitulosValor" parent="CardValue">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/Gray</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TitulosCondicaoPagamentoLabel" parent="CardLabel">
+        <item name="android:text">CONDIÇÃO DE PAGAMENTO</item>
+    </style>
+
+    <style name="TitulosCondicaoPagamento" parent="CardValue">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/Gray</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TitulosQuantidadeProdutosLabel" parent="CardLabel">
+        <item name="android:textAlignment">center</item>
+        <item name="android:text">QUANTIDADE</item>
+    </style>
+
+    <style name="TitulosQuantidadeProdutos" parent="CardValue">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/Gray</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TitulosSituacaoLabel" parent="CardLabel">
+        <item name="android:textAlignment">center</item>
+        <item name="android:text">SITUAÇÃO</item>
+    </style>
+
+    <style name="TitulosSituacao" parent="CardValue">
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/Gray</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+
+    <!-- QuickAdd -->
+    <style name="QuickAddButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-condensed-medium</item>
+        <item name="android:text">INSERIR</item>
+    </style>
+
+
+
+    <!-- TOOLBAR -->
+    <style name="ToolbarTitle">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ToolbarSubtitle">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+</resources>

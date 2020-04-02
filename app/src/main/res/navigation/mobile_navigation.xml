@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.mobilesales.mobilesalescore.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_clientes"
+        android:name="com.mobilesales.mobilesalescore.modulos.cliente.views.fragments.cliente_main.ClientesFragment"
+        android:label="Clientes teste"
+        tools:layout="@layout/fragment_clientes" >
+
+        <action
+            android:id="@+id/action_nav_clientes_to_nav_clientes_insert"
+            app:destination="@id/nav_clientes_insert"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="true"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_enter_anim"
+            app:popExitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_clientes_insert"
+        android:name="com.mobilesales.mobilesalescore.modulos.cliente.views.fragments.cliente_cadastro.ClientesCreateFragment"
+        android:label="Clientes Insert"
+        tools:layout="@layout/fragment_clientes_create" />
+
+    <fragment
+        android:id="@+id/nav_titulo_detalhes"
+        android:name="com.mobilesales.mobilesalescore.ui.titulos.detalhes.TituloDetalhesFragment"
+        android:label="Detalhes do Título"
+        tools:layout="@layout/fragment_titulo_detalhes" />
+
+    <fragment
+        android:id="@+id/nav_pedido_cabecalho"
+        android:name="com.mobilesales.mobilesalescore.modulos.pedido.views.fragments.pedido_cabecalho.PedidoCabecalhoFragment"
+        android:label="Pedido Cabeçalho"
+        tools:layout="@layout/fragment_pedido_cabecalho" />
+
+    <fragment
+        android:id="@+id/nav_lista_pedidos"
+        android:name="com.mobilesales.mobilesalescore.ui.pedidos.PedidosListFragment"
+        android:label="@string/menu_pedidos"
+        tools:layout="@layout/fragment_pedidos" >
+
+        <argument
+            android:name="CODE"
+            android:defaultValue="nenhum"/>
+
+        <argument
+            android:name="PEDIDO_REFERENCE"
+            android:defaultValue="nenhum"/>
+
+        <action
+            android:id="@+id/action_nav_lista_pedidos_to_nav_pedido"
+            app:destination="@id/nav_pedido"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popUpToInclusive="true"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:launchSingleTop="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_pedido"
+        android:name="com.mobilesales.mobilesalescore.modulos.pedido.views.fragments.pedido_main.PedidoFragment"
+        android:label="@string/menu_pedidos"
+        tools:layout="@layout/fragment_pedido">
+
+        <argument android:name="CODE"
+            android:defaultValue="nenhum"/>
+        <action
+            android:id="@+id/action_nav_pedido_to_nav_produtos"
+            app:destination="@id/nav_produtos" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_historicos"
+        android:name="com.mobilesales.mobilesalescore.ui.historicos.HistoricoFragment"
+        android:label="@string/menu_historicos"
+        tools:layout="@layout/fragment_historicos" />
+
+    <fragment
+        android:id="@+id/nav_titulos"
+        android:name="com.mobilesales.mobilesalescore.ui.titulos.TitulosFragment"
+        android:label="@string/menu_titulos"
+        tools:layout="@layout/fragment_titulos" >
+        <action
+            android:id="@+id/action_nav_titulos_to_nav_titulo_detalhes"
+            app:destination="@id/nav_titulo_detalhes"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_catalogo"
+        android:name="com.mobilesales.mobilesalescore.ui.catalogo.CatalogoFragment"
+        android:label="@string/menu_catalogo"
+        tools:layout="@layout/fragment_catalogo" />
+
+    <fragment
+        android:id="@+id/nav_produtos"
+        android:name="com.mobilesales.mobilesalescore.ui.produtos.ProdutosFragment"
+        android:label="@string/menu_produtos"
+        tools:layout="@layout/fragment_produtos" />
+
+    <fragment
+        android:id="@+id/nav_sincronizacao"
+        android:name="com.mobilesales.mobilesalescore.ui.sincronizacao.SincronizacaoFragment"
+        android:label="@string/menu_sincronizacao"
+        tools:layout="@layout/fragment_sincronizacao" />
+
+    <fragment
+        android:id="@+id/nav_sair"
+        android:name="com.mobilesales.mobilesalescore.ui.sair.SairFragment"
+        android:label="@string/menu_sair"
+        tools:layout="@layout/fragment_sair" />
+</navigation>
